@@ -3,11 +3,12 @@ import { Switch, Route } from 'react-router-dom'
 import NavigationContainer from '../NavigationContainer'
 import LandingContainer from '../LandingContainer'
 import ContentContainer from '../ContentContainer'
+import './styles.css'
 
 export default class MainContainer extends React.Component {
   render() {
     return (
-      <section>
+      <section className="main-cnt">
         <NavigationContainer />
         <Switch>
           <Route exact path="/" component={LandingContainer} />

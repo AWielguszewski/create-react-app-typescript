@@ -1,10 +1,19 @@
 {
   "name": "pretty-typed-react-starter",
-  "version": "0.0.5",
+  "version": "0.0.7",
   "description": "Configuration and template for React with Router, Prettier, MobX and TypeScript",
   "repository": "AWielguszewski/pretty-typed-react-starter",
   "license": "MIT",
-  "keywords":["react","mobx","code-splitting","react-boilerplate","react-router","prettier","typescript","react-typescript"],
+  "keywords": [
+    "react",
+    "mobx",
+    "code-splitting",
+    "react-boilerplate",
+    "react-router",
+    "prettier",
+    "typescript",
+    "react-typescript"
+  ],
   "engines": {
     "node": ">=6"
   },

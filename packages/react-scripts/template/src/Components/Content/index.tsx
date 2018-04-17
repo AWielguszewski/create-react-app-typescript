@@ -3,7 +3,9 @@ import { PropTypes } from './types'
 
 const Content = ({ data, number = 1 }: PropTypes) => (
   <section>
-    test Dynamically loaded content with data : {data}[{number}]
+    <h3>
+      test Dynamically loaded content with data : {data}[{number}]
+    </h3>
   </section>
 )
 

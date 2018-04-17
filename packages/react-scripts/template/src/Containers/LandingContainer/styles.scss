@@ -1,0 +1,20 @@
+@import '../../Utils/colors.scss';
+
+.landing-cnt {
+  background-color: $dark-blue;
+  color: $white;
+  width: 100%;
+  left: 0px;
+  right: 0px;
+  min-height: 200px;
+  display: flex;
+  align-items: center;
+  padding: 60px 0px;
+  flex-direction: column;
+  p {
+    color: $main-blue;
+    margin: 10px 0px;
+    font-size: 30px;
+    letter-spacing: 0.01em;
+  }
+}

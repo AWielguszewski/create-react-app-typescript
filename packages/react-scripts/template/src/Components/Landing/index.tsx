@@ -5,8 +5,8 @@ import { observer } from 'mobx-react'
 const Landing = observer(
   ({ store: { isLogged, logIn, logOut, user } }: PropTypes) => (
     <section>
-      <p>Dynamically loaded landing</p>
-      {isLogged && <p>User: {user}</p>}
+      <h3>Dynamically loaded landing</h3>
+      {isLogged && <h3>User: {user}</h3>}
       <button onClick={isLogged ? logOut : logIn}>
         {isLogged ? 'Log out' : 'Log in'}
       </button>

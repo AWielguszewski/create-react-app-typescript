@@ -1,3 +1,5 @@
+<img alt="React" src="https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/react/react.png" width=100>
+
 # `pretty-typed-react-starter` [![npm version](https://badge.fury.io/js/pretty-typed-react-starter.svg)](https://badge.fury.io/js/pretty-typed-react-starter)
 
 Create React apps (with Typescript) with no build configuration.

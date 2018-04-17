@@ -66,7 +66,7 @@ my-app
 ## Concept
 
 The project structure is created with separation of logic from view and code-splitting in mind.
-Ideally you keep your logic in the `Containers` and view in `Components`
+Ideally you keep your logic in the `Containers` and view in `Components`.
 Typical structure for a `Container/Component` would be :
 ```
 Container/Component

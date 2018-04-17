@@ -40,11 +40,18 @@ module.exports = function(
 
   // Setup the script rules
   appPackage.scripts = {
-    start: 'react-scripts-ts start',
-    build: 'react-scripts-ts build',
-    test: 'react-scripts-ts test --env=jsdom',
-    eject: 'react-scripts-ts eject',
+    buildcss: "node-sass-chokidar src/ -o src/",
+    watchcss: "npm run buildcss && node-sass-chokidar src/ -o src/ --watch --recursive",
+    startjs: "pretty-typed-react-starter start",
+    start: "npm-run-all -p watchcss startjs",
+    build: "npm run buildcss && pretty-typed-react-starter build"
   };
+
+  //Add prettier config
+  appPackage.prettier = {
+    semi: false,
+    singleQuote: true
+  }
 
   fs.writeFileSync(
     path.join(appPath, 'package.json'),
@@ -108,7 +115,9 @@ module.exports = function(
     '@types/node',
     '@types/react',
     '@types/react-dom',
-    '@types/jest',
+    "@types/react-loadable",
+    "@types/react-router-dom",
+    "prettier",
     'typescript',
   ];
 
@@ -180,9 +189,6 @@ module.exports = function(
     chalk.cyan(`  ${displayedCommand} ${useYarn ? '' : 'run '}build`)
   );
   console.log('    Bundles the app into static files for production.');
-  console.log();
-  console.log(chalk.cyan(`  ${displayedCommand} test`));
-  console.log('    Starts the test runner.');
   console.log();
   console.log(
     chalk.cyan(`  ${displayedCommand} ${useYarn ? '' : 'run '}eject`)

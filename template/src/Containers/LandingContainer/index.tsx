@@ -6,7 +6,7 @@ import './styles.css'
 
 const LandingContainer = observer(() => (
   <section className="landing-cnt">
-    <p>Content title</p>
+    <p>landing title</p>
     <DynamicLanding store={store} />
   </section>
 ))

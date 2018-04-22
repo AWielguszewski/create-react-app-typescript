@@ -21,6 +21,7 @@ const paths = require('./paths')
 const getClientEnvironment = require('./env')
 const TsconfigPathsPlugin = require('tsconfig-paths-webpack-plugin')
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin')
+const { InjectManifest } = require('workbox-webpack-plugin')
 
 // Webpack uses `publicPath` to determine where the app is being served from.
 // It requires a trailing slash, or the file assets will get an incorrect path.
@@ -350,6 +351,16 @@ module.exports = {
       async: false,
       tsconfig: paths.appTsConfig,
       tslint: paths.appTsLint
+    }),
+    //Precache config for serviceWorker provided by Workbox from Google.
+    new InjectManifest({
+      //path to the original serviceWorker file created in src folder
+      //most of the configuration will be in that file
+      swSrc: './src/serviceWorker.js',
+      //including HTML, JS ans CSS files in the precache manifest
+      include: [/\.html$/, /\.js$/, /\.css$/],
+      //excluding image files from the precache manifest
+      exclude: [/\.jpg$/, /\.png$/]
     })
   ],
   // Some libraries import Node modules but don't use them in the browser.

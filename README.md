@@ -4,7 +4,7 @@
 
 Create React apps (with Typescript) with no build configuration.
 
- * [Getting Started](#tldr) – How to use 'create react app'.
+* [Getting Started](#tldr) – How to use 'create react app'.
 
 _Do you know react and want to try out typescript? Or do you know typescript and want to try out react?_ Get all the benefits from `create-react-app` but you use typescript! 🚀
 
@@ -20,15 +20,19 @@ npm start or yarn start
 
 ## About
 
-This is a variation of the 'create react app' with custom scripts and template. It includes:
-- [TypeScript](https://www.typescriptlang.org/) 
-- [Prettier](https://prettier.io/) - *note:* replaced ES/TSlint. To make it work you need to install it in your editor (for more info check out the official documentation)
-- [MobX](https://mobx.js.org/) - Easier than Redux yet equally powerfull and fun to use.
-- [React Loadable](https://github.com/jamiebuilds/react-loadable) - Code-splitting made easy. Works great with current webpack configuration from create react app. Example included in the template.
-- [Sass](https://sass-lang.com/) - CSS preprocessor with `node-sass-chokidar` package
-- [React Router](https://github.com/ReactTraining/react-router) 
+This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons, configurable service worker and support for web/native notifications. The servce worker will notify user that the web page is ready to be used offline and provide a custom 'add to Home Screen' experience.
+It includes:
+
+* [TypeScript](https://www.typescriptlang.org/)
+* [Prettier](https://prettier.io/) - _note:_ replaced ES/TSlint. To make it work you need to install it in your editor (for more info check out the official documentation)
+* [MobX](https://mobx.js.org/) - Easier than Redux yet equally powerfull and fun to use.
+* [React Loadable](https://github.com/jamiebuilds/react-loadable) - Code-splitting made easy. Works great with current webpack configuration from create react app. Example included in the template.
+* [Sass](https://sass-lang.com/) - CSS preprocessor with `node-sass-chokidar` package
+* [React Router](https://github.com/ReactTraining/react-router) - basic routing with PWA support (HashRouter)
+* [Workbox](https://developers.google.com/web/tools/workbox/) - with `workbox` i replaced standard approach to PWA that was shipped with default `create-react-app` config. The service worker is now fully configurable in `/src/serviceWorker`. It is pre-configured in `Webpack` to include `.js .html and .css` files in the precache manifest but exclude any images.
 
 ## Project structure
+
 ```
 my-app
 ├── README.md
@@ -70,6 +74,7 @@ my-app
 The project structure is created with separation of logic from view and code-splitting in mind.
 Ideally you keep your logic in the `Containers` and view in `Components`.
 Typical structure for a `Container/Component` would be :
+
 ```
 Container/Component
     └── index.tsx (main file)
@@ -77,3 +82,13 @@ Container/Component
     └── types.ts (exported types)
     └── styles.scss (styles for that specific Container/Component)
 ```
+
+## Changelog
+
+###0.2.6
+
+* change from BrowserRouter to HashRouter
+* user can now refresh page with route applied in offline mode (everything now properly points to `index.html`)
+  ###0.2.0
+* added basic support for `Workbox`
+* removed old files

@@ -85,9 +85,13 @@ Container/Component
 
 ## Changelog
 
+### 0.2.7
+
+* added splash screen images
+
 ### 0.2.6
 
-* change from BrowserRouter to HashRouter
+* change from `BrowserRouter`to `HashRouter`
 * user can now refresh page with route applied in offline mode (everything now properly points to `index.html`)
 
 ### 0.2.0

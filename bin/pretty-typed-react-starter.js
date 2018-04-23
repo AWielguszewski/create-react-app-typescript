@@ -7,7 +7,6 @@
  */
 
 'use strict'
-console.log('gowno')
 
 const spawn = require('react-dev-utils/crossSpawn')
 const args = process.argv.slice(2)

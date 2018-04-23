@@ -20,7 +20,7 @@ npm start or yarn start
 
 ## About
 
-This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons, configurable service worker and support for web/native notifications. The servce worker will notify user that the web page is ready to be used offline and provide a custom 'add to Home Screen' experience.
+This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons and configurable service worker.
 It includes:
 
 * [TypeScript](https://www.typescriptlang.org/)

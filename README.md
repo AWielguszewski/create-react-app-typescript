@@ -21,7 +21,8 @@ npm start or yarn start
 ## About
 
 This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons and configurable service worker.
-It includes:
+
+Features:
 
 * [TypeScript](https://www.typescriptlang.org/)
 * [Prettier](https://prettier.io/) - _note:_ replaced ES/TSlint. To make it work you need to install it in your editor (for more info check out the official documentation)

@@ -86,6 +86,10 @@ Container/Component
 
 ## Changelog
 
+### 0.2.10
+
+* added runtime routing for workbox
+
 ### 0.2.7
 
 * added splash screen images

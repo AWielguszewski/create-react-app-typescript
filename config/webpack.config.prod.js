@@ -358,7 +358,7 @@ module.exports = {
       //most of the configuration will be in that file
       swSrc: './src/serviceWorker.js',
       //including JS ans CSS files in the precache manifest
-      include: [/\.js$/, /\.css$/],
+      include: [/\.html$/, /\.js$/, /\.css$/],
       //excluding image files from the precache manifest
       exclude: [/\.jpg$/, /\.png$/]
     })

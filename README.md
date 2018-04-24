@@ -86,6 +86,10 @@ Container/Component
 
 ## Changelog
 
+### 0.2.13
+
+* removed dynamically loaded chunks from the precache manifest
+
 ### 0.2.10
 
 * added runtime routing for workbox

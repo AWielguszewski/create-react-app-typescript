@@ -360,7 +360,7 @@ module.exports = {
       //including JS ans CSS files in the precache manifest
       include: [/\.html$/, /\.js$/, /\.css$/],
       //excluding image files from the precache manifest
-      exclude: [/\.jpg$/, /\.png$/]
+      exclude: [/\.jpg$/, /\.png$/, /.*\.chunk\..*/]
     })
   ],
   // Some libraries import Node modules but don't use them in the browser.

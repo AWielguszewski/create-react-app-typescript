@@ -1,4 +1,6 @@
-# `pretty-typed-react-starter` ![downloads](https://img.shields.io/npm/dt/pretty-typed-react-starter.svg) [![npm version](https://badge.fury.io/js/pretty-typed-react-starter.svg)](https://badge.fury.io/js/pretty-typed-react-starter)
+# `pretty-typed-react-starter`
+
+![downloads](https://img.shields.io/npm/dt/pretty-typed-react-starter.svg) [![npm version](https://badge.fury.io/js/pretty-typed-react-starter.svg)](https://badge.fury.io/js/pretty-typed-react-starter)
 
 <img alt="React" src="https://raw.githubusercontent.com/github/explore/6c6508f34230f0ac0d49e847a326429eefbfc030/topics/react/react.png" width=100>
 

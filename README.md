@@ -22,7 +22,10 @@ npm start or yarn start
 
 This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons and configurable service worker.
 
-Features:
+<img alt="screen" src="screen.png">
+To make the result a 5x 100 you need to try server-side rendering for the main component, enable HTTPS and use 'cache-control' header for the serviceWorker file on your server
+
+## Features:
 
 * [TypeScript](https://www.typescriptlang.org/)
 * [Prettier](https://prettier.io/) - _note:_ replaced ES/TSlint. To make it work you need to install it in your editor (for more info check out the official documentation)
@@ -85,6 +88,11 @@ Container/Component
 ```
 
 ## Changelog
+
+### 0.2.14
+
+* added meta tag with description in `index.html`
+* added baseUrl in `tsconfig.json`
 
 ### 0.2.13
 

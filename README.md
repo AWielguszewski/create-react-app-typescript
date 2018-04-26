@@ -23,7 +23,10 @@ npm start or yarn start
 This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons and configurable service worker.
 
 <img alt="screen" src="screen.png">
-To make the result a 5x 100 you need to try server-side rendering for the main component, enable HTTPS and use 'cache-control' header for the serviceWorker file on your server
+
+#### note about Lighthouse results:
+
+_To make the result a 5x 100 you need to try server-side rendering for the main component, enable HTTPS and use 'cache-control' header for the serviceWorker file on your server_
 
 ## Features:
 

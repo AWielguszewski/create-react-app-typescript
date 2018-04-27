@@ -22,7 +22,7 @@ workbox.routing.registerRoute(
   })
 )
 workbox.routing.registerRoute(
-  /.*\.(?:png|jpg|jpeg|svg|gif)/g,
+  /.*\.(?:png|jpg|jpeg|svg|gif|ico)/g,
   workbox.strategies.cacheFirst({
     cacheName: 'ptrs-images',
     plugins: [

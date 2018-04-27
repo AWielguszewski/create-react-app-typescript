@@ -99,7 +99,7 @@ Container/Component
 * added support for `Push Notification API`
 * added basic functions for managing permission and sending notifications
 * added new `store` instance for permissions
-* added simplifacions to `registerServiceWorker/js`
+* added simplifacions to `registerServiceWorker.js`
 
 ### 0.2.14
 

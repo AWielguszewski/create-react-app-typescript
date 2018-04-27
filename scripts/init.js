@@ -111,7 +111,7 @@ module.exports = function(
 
   // Install dev dependencies
   const types = [
-    '@types/node',
+    '@types/node@8.10.10',
     '@types/react',
     '@types/react-dom',
     '@types/react-loadable',

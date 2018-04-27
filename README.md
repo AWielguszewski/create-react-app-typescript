@@ -22,7 +22,7 @@ npm start or yarn start
 
 ## About
 
-This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons, configurable service worker and full support for Web Push Notification API.
+This is a variation of the 'create react app' with custom scripts and template. Full `Progressive Web App (PWA)` integration is implemented in this project with offline-first strategy, custom splash screen, icons, configurable service worker and full support for `Web Push Notification API`.
 
 <img alt="screen" src="screen.png">
 

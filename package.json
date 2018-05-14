@@ -1,6 +1,6 @@
 {
   "name": "pretty-typed-react-starter",
-  "version": "0.2.23",
+  "version": "0.2.24",
   "description": "Configuration and template for React with Router, Prettier, MobX and TypeScript",
   "repository": "AWielguszewski/pretty-typed-react-starter",
   "license": "MIT",

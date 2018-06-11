@@ -23,10 +23,12 @@ function registerValidSW(swUrl: string) {
   navigator.serviceWorker
     .register(swUrl)
     .then(registration => {
-      console.log('Service Worker registered')
+      if (process.env.NODE_ENV === 'development')
+        console.log('Service Worker registered')
     })
     .catch(error => {
-      console.error('Error during service worker registration:', error)
+      if (process.env.NODE_ENV === 'development')
+        console.error('Error during service worker registration:', error)
     })
 }
 

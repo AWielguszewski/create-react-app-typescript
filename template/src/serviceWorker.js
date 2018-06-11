@@ -1,9 +1,38 @@
 //workbox will use debug logs automatically when on localhost. it will switch to production on real server
 //below you can manually overide this behaviour. it will always use debug/production build
-//workbox.setConfig({ debug: true })
+//workbox.setConfig({ debug: process.env.NODE_ENV === 'development' })
 
 //here you can initialize offlice support for google analytics
 //workbox.googleAnalytics.initialize()
+
+//custom handlers are here because sometimes passing just RegExp to registerRoute won't work properly
+//custom handler for route matching with [code]
+const matchScripts = ({ url, event }) => {
+  const regex = new RegExp('.*\\.(?:js|css|html)$', 'gi')
+  const result = regex.test(url.pathname)
+  if (url.hostname === 'localhost') {
+    console.log('matching url: ', url.pathname)
+    console.log('result: ', result)
+  }
+  return result
+}
+//custom handler for route matching with [images]
+const matchImages = ({ url, event }) => {
+  const regex = new RegExp('.*\\.(?:png|jpg|jpeg|svg|gif|ico)$', 'gi')
+  const result = regex.test(url.pathname)
+  if (url.hostname === 'localhost') {
+    console.log('matching url: ', url.pathname)
+    console.log('result: ', result)
+  }
+  return result
+}
+
+//here we skip waiting for user to close the page to update the service worker
+workbox.skipWaiting()
+workbox.clientsClaim()
+
+//here workbox will inject precache manifest that was configurated in webpack
+workbox.precaching.precacheAndRoute(self.__precacheManifest)
 
 //set prefix and suffix for cache naming. example cache name after changes: ptrs-precache-v1
 workbox.core.setCacheNameDetails({
@@ -11,20 +40,18 @@ workbox.core.setCacheNameDetails({
   suffix: 'v1'
 })
 
-//here workbox will inject precache manifest that was configurated in webpack
-workbox.precaching.precacheAndRoute(self.__precacheManifest)
-
 //here we set some rules for caching resources at runtime using workbox's strategies
 workbox.routing.registerRoute(
-  /\.(?:js|css|html)$/g,
-  workbox.strategies.staleWhileRevalidate({
-    cacheName: 'ptrs-code'
+  matchScripts,
+  workbox.strategies.cacheFirst({
+    cacheName: 'gowno-code'
   })
 )
+
 workbox.routing.registerRoute(
-  /.*\.(?:png|jpg|jpeg|svg|gif|ico)/g,
+  matchImages,
   workbox.strategies.cacheFirst({
-    cacheName: 'ptrs-images',
+    cacheName: 'gowno-images',
     plugins: [
       new workbox.expiration.Plugin({
         maxEntries: 60,
@@ -33,3 +60,14 @@ workbox.routing.registerRoute(
     ]
   })
 )
+
+//a default handler that catches any not matched routes
+workbox.routing.setDefaultHandler(({ url, event, params }) => {
+  if (url.hostname === 'localhost')
+    console.log('got uncatched event from url: ', url)
+})
+//a catch handler that receives errors from routes
+workbox.routing.setCatchHandler(({ url, event, params }) => {
+  if (url.hostname === 'localhost')
+    console.log('got an error from route: ', url)
+})

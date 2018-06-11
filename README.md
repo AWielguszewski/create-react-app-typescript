@@ -6,7 +6,7 @@
 
 Create React apps (with Typescript) with no build configuration.
 
-* [Getting Started](#tldr) – How to use 'create react app'.
+- [Getting Started](#tldr) – How to use 'create react app'.
 
 _Do you know react and want to try out typescript? Or do you know typescript and want to try out react?_ Get all the benefits from `create-react-app` but you use typescript! 🚀
 
@@ -32,13 +32,13 @@ _To make the result a 5x 100 you need to try server-side rendering for the main 
 
 ## Features:
 
-* [TypeScript](https://www.typescriptlang.org/)
-* [Prettier](https://prettier.io/) - _note:_ replaced ES/TSlint. To make it work you need to install it in your editor (for more info check out the official documentation)
-* [MobX](https://mobx.js.org/) - Easier than Redux yet equally powerfull and fun to use.
-* [React Loadable](https://github.com/jamiebuilds/react-loadable) - Code-splitting made easy. Works great with current webpack configuration from create react app. Example included in the template.
-* [Sass](https://sass-lang.com/) - CSS preprocessor with `node-sass-chokidar` package
-* [React Router](https://github.com/ReactTraining/react-router) - basic routing with PWA support (HashRouter)
-* [Workbox](https://developers.google.com/web/tools/workbox/) - with `workbox` i replaced standard approach to PWA that was shipped with default `create-react-app` config. The service worker is now fully configurable in `/src/serviceWorker`. It is pre-configured in `Webpack` to include `.js .html and .css` files in the precache manifest but exclude any images.
+- [TypeScript](https://www.typescriptlang.org/)
+- [Prettier](https://prettier.io/) - _note:_ replaced ES/TSlint. To make it work you need to install it in your editor (for more info check out the official documentation)
+- [MobX](https://mobx.js.org/) - Easier than Redux yet equally powerfull and fun to use.
+- [React Loadable](https://github.com/jamiebuilds/react-loadable) - Code-splitting made easy. Works great with current webpack configuration from create react app. Example included in the template.
+- [Sass](https://sass-lang.com/) - CSS preprocessor with `node-sass-chokidar` package
+- [React Router](https://github.com/ReactTraining/react-router) - basic routing with PWA support (HashRouter)
+- [Workbox](https://developers.google.com/web/tools/workbox/) - with `workbox` i replaced standard approach to PWA that was shipped with default `create-react-app` config. The service worker is now fully configurable in `/src/serviceWorker`. It is pre-configured in `Webpack` to include `.js .html and .css` files in the precache manifest but exclude any images.
 
 ## Project structure
 
@@ -94,36 +94,42 @@ Container/Component
 
 ## Changelog
 
+### 0.2.27
+
+- added custom handlers for service worker to be more reliable
+- added conditional logging in for service worker activities
+- added `skipWaiting()` and `clientsClaim()` to workbox
+
 ### 0.2.20
 
-* added support for `Push Notification API`
-* added basic functions for managing permission and sending notifications
-* added new `store` instance for permissions
-* added simplifacions to `registerServiceWorker.js`
+- added support for `Push Notification API`
+- added basic functions for managing permission and sending notifications
+- added new `store` instance for permissions
+- added simplifacions to `registerServiceWorker.js`
 
 ### 0.2.14
 
-* added meta tag with description in `index.html`
-* added baseUrl in `tsconfig.json`
+- added meta tag with description in `index.html`
+- added baseUrl in `tsconfig.json`
 
 ### 0.2.13
 
-* removed dynamically loaded chunks from the precache manifest
+- removed dynamically loaded chunks from the precache manifest
 
 ### 0.2.10
 
-* added runtime routing for workbox
+- added runtime routing for workbox
 
 ### 0.2.7
 
-* added splash screen images
+- added splash screen images
 
 ### 0.2.6
 
-* change from `BrowserRouter`to `HashRouter`
-* user can now refresh page with route applied in offline mode (everything now properly points to `index.html`)
+- change from `BrowserRouter`to `HashRouter`
+- user can now refresh page with route applied in offline mode (everything now properly points to `index.html`)
 
 ### 0.2.0
 
-* added basic support for `Workbox`
-* removed old files
+- added basic support for `Workbox`
+- removed old files
